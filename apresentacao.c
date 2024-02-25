@@ -1,28 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "apresentacao.h"
+#include <locale.h>
 
 const int TAM_SEPARADOR = 40;
 
 void separador()
 {
-    for (int i = 0 ; i< TAM_SEPARADOR; i++ )
-        printf("#");
+    for (int i = 0 ; i< TAM_SEPARADOR; i++ ){  
+        printf("*");
+    }
     printf("\n");
+    
 }
 
 
 int MenuPrincipal()
 {
     int opcao;
-    system("clear"); // <- opcao caso Linux 
-    // system("cls"); // <- opcao caso Windows
+   
+    system("cls"); // <- opcao caso Windows
+
+    for (int i = 0 ; i<  TAM_SEPARADOR; i++ ){
+        if(i==11)
+            printf("-Menu Principal-");
+        printf("*");
+    }
+    printf("\n");
+
+    printf("\t1. Venda\n\t2. Clientes\n\t3. Produtos\n\t9. Sair\n");
     separador();
-    printf("1. Venda\n2. Clientes\n3. Produtos\n9. Sair\n");
     separador();
-    separador();
-    printf("\nOpÃ§Ã£o -> ");
+    printf("\nOpção -> ");
     
     scanf(" %d", &opcao );
     return opcao;
+}
+int main(){
+    setlocale(LC_ALL,"Portuguese_Brazil");
+   
+    int opcao = MenuPrincipal();
+    return 0;
 }
