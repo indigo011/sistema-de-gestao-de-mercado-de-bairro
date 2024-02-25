@@ -22,8 +22,10 @@ int MenuPrincipal()
     system("cls"); // <- opcao caso Windows
 
     for (int i = 0 ; i<  TAM_SEPARADOR; i++ ){
-        if(i==11)
-            printf("-Menu Principal-");
+        if(i==12)
+            printf(" Menu Principal ");
+        if (i > 11 && i < 28)
+            continue;
         printf("*");
     }
     printf("\n");
