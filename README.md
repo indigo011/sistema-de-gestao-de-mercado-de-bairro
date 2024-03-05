@@ -1,1 +1,0 @@
-# sistema-de-gestao-de-mercado-de-bairro
