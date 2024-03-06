@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "apresentacao.h"
 #include <locale.h>
 
 const int TAM_SEPARADOR = 40;
